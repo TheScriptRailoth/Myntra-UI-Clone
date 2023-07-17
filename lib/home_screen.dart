@@ -101,6 +101,65 @@ class _HomeScreenState extends State<HomeScreen> {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
+            SizedBox(width: 20,),
+            Column(
+              children: [
+                CircleAvatar(
+                  radius: 28,
+                  backgroundImage: AssetImage('assets/myntra_logo.png'),
+                ),
+                SizedBox(height: 10,),
+                Text('CATEGORIES')
+              ],
+            ),
+            SizedBox(width: 20,),
+
+            Column(
+              children: [
+                CircleAvatar(
+                  radius: 28,
+                  backgroundImage: AssetImage('assets/myntra_logo.png'),
+                ),
+                SizedBox(height: 10,),
+                Text('CATEGORIES')
+              ],
+            ),
+            SizedBox(width: 20,),
+
+            Column(
+              children: [
+                CircleAvatar(
+                  radius: 28,
+                  backgroundImage: AssetImage('assets/myntra_logo.png'),
+                ),
+                SizedBox(height: 10,),
+                Text('CATEGORIES')
+              ],
+            ),
+            SizedBox(width: 20,),
+
+            Column(
+              children: [
+                CircleAvatar(
+                  radius: 28,
+                  backgroundImage: AssetImage('assets/myntra_logo.png'),
+                ),
+                SizedBox(height: 10,),
+                Text('CATEGORIES')
+              ],
+            ),
+            SizedBox(width: 20,),
+            Column(
+              children: [
+                CircleAvatar(
+                  radius: 28,
+                  backgroundImage: AssetImage('assets/myntra_logo.png'),
+                ),
+                SizedBox(height: 10,),
+                Text('CATEGORIES')
+              ],
+            ),
+            SizedBox(width: 20,),
             Column(
               children: [
                 CircleAvatar(
