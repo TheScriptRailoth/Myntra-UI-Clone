@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -7,63 +8,40 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  int currentIndex=0;
+
+  List<String> images=[
+    'https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/28/0174e4d7-448c-4746-8572-69461ad5be101659020268081-Tops---Tees_Desk.jpg',
+    'https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/28/6107d28b-2bcb-44e6-9743-655b54550b8f1659020199598-Workwear_Desk--1-.jpg',
+    'https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/28/84b6a214-9eb3-49eb-9f9d-72cec56ec5d71659019908592-Indian-Wear_DK--1-.jpg',
+    'https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/6/27/53b4daed-cd2c-4111-86c5-14f737eceb351656325318973-Handbags_Desk.jpg',
+    'https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/25/b656a7f4-4688-4997-bb7c-54b78793981e1658752386588-Western-Wear_Desk.jpg'
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       backgroundColor: Colors.white,
         appBar: AppBar(
           elevation: 0.5,
           backgroundColor: Colors.white,
           leading: Image.asset('assets/myntra_logo.png', width: 150, height: 150,),
           actions: [
-            IconButton(onPressed: (){}, icon: Icon(Icons.search), color: Colors.black,),
-            IconButton(onPressed: (){}, icon: Icon(Icons.notifications_none_rounded),color: Colors.black,),
-            IconButton(onPressed: (){}, icon: Icon(Icons.favorite_border),color: Colors.black,),
-            IconButton(onPressed: (){}, icon: Icon(Icons.shopping_bag_outlined),color: Colors.black,),
+            IconButton(onPressed: (){}, icon: const Icon(Icons.search), color: Colors.black,),
+            IconButton(onPressed: (){}, icon: const Icon(Icons.notifications_none_rounded),color: Colors.black,),
+            IconButton(onPressed: (){}, icon: const Icon(Icons.favorite_border),color: Colors.black,),
+            IconButton(onPressed: (){}, icon: const Icon(Icons.shopping_bag_outlined),color: Colors.black,),
           ],
         ),
-      body: Column(
-        children:[ Row(
-        children: [
-          Expanded(
-            child: Container(
-              height: 43,
-              margin: EdgeInsets.all(10),
-              child: ElevatedButton(
-                onPressed: () {
-                  // Button 1 functionality
-                },
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.white,
-                  onPrimary: Colors.black,
-                  side:BorderSide( width: 2, color: Colors.black),
-                  elevation: 0.0,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(40),
-                  ),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children:[
-                    Container(
-                      width: 25, // Set the desired width
-                      height: 30, // Set the desired height
-                      child: Image.asset(
-                        'assets/fasion_image.png', // Replace with your image path
-                        fit: BoxFit.cover, // Adjust the fit property as needed
-                      ),
-                    ),
-                    SizedBox(width: 10,),
-                    Text('Fasion', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                  ]
-                )
-              ),
-            ),
-          ),
-          Expanded(
-            child: Container(
-              height: 43,
-              margin: const EdgeInsets.all(10),
-              child: ElevatedButton(
+      body: SingleChildScrollView(
+         scrollDirection: Axis.vertical,
+        child: Column(
+          children:[ Row(
+          children: [
+            Expanded(
+              child: Container(
+                height: 43,
+                margin: EdgeInsets.all(10),
+                child: ElevatedButton(
                   onPressed: () {
                     // Button 1 functionality
                   },
@@ -77,104 +55,395 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children:[
-                        Container(
-                          width: 25, // Set the desired width
-                          height: 30, // Set the desired height
-                          child: Image.asset(
-                            'assets/beauty_image.png', // Replace with your image path
-                            fit: BoxFit.cover, // Adjust the fit property as needed
-                          ),
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children:[
+                      Container(
+                        width: 25, // Set the desired width
+                        height: 30, // Set the desired height
+                        child: Image.asset(
+                          'assets/fasion_image.png', // Replace with your image path
+                          fit: BoxFit.cover, // Adjust the fit property as needed
                         ),
-                        SizedBox(width: 10,),
-                        Text('Beauty', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                      ]
+                      ),
+                      const SizedBox(width: 10,),
+                      const Text('Fasion', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                    ]
+                  )
+                ),
+              ),
+            ),
+            Expanded(
+              child: Container(
+                height: 43,
+                margin: const EdgeInsets.all(10),
+                child: ElevatedButton(
+                    onPressed: () {
+                      // Button 1 functionality
+                    },
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.white,
+                      onPrimary: Colors.black,
+                      side:BorderSide( width: 2, color: Colors.black),
+                      elevation: 0.0,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(40),
+                      ),
+                    ),
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children:[
+                          Container(
+                            width: 25, // Set the desired width
+                            height: 30, // Set the desired height
+                            child: Image.asset(
+                              'assets/beauty_image.png', // Replace with your image path
+                              fit: BoxFit.cover, // Adjust the fit property as needed
+                            ),
+                          ),
+                          SizedBox(width: 10,),
+                          Text('Beauty', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                        ]
+                    )
+                ),
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 10),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              const SizedBox(width: 20,),
+              Column(
+                children: [
+                  CircleAvatar(
+                    radius: 28,
+                    backgroundImage: AssetImage('assets/myntra_logo.png'),
+                  ),
+                  SizedBox(height: 4,),
+                  Text('CATEGORIES', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12 ),)
+                ],
+              ),
+              const SizedBox(width: 20,),
+              Column(
+                children: [
+                  CircleAvatar(
+                    radius: 28,
+                    backgroundImage: AssetImage('assets/myntra_logo.png'),
+                  ),
+                  SizedBox(height: 4,),
+                  Text('MEN',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12 ),)
+                ],
+              ),
+              const SizedBox(width: 20,),
+              Column(
+                children: [
+                  CircleAvatar(
+                    radius: 28,
+                    backgroundImage: AssetImage('assets/myntra_logo.png'),
+                  ),
+                  SizedBox(height: 4,),
+                  Text('WOMEN',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12 ),)
+                ],
+              ),
+              const SizedBox(width: 20,),
+              Column(
+                children: [
+                  CircleAvatar(
+                    radius: 28,
+                    backgroundImage: AssetImage('assets/myntra_logo.png'),
+                  ),
+                  SizedBox(height: 4,),
+                  Text('KIDS',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12 ),)
+                ],
+              ),
+              const SizedBox(width: 20,),
+              Column(
+                children: [
+                  CircleAvatar(
+                    radius: 28,
+                    backgroundImage: AssetImage('assets/myntra_logo.png'),
+                  ),
+                  SizedBox(height: 4,),
+                  Text('FOOTWEAR',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12 ),)
+                ],
+              ),
+              const SizedBox(width: 20,),
+              Column(
+                children: const [
+                  CircleAvatar(
+                    radius: 28,
+                    backgroundImage: AssetImage('assets/myntra_logo.png'),
+                  ),
+                  SizedBox(height: 4,),
+                  Text('BEAUTY',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12 ),)
+                ],
+              ),
+              const SizedBox(width: 20,),
+              Column(
+                children: [
+                  CircleAvatar(
+                    radius: 28,
+                    backgroundImage: AssetImage('assets/myntra_logo.png'),
+                  ),
+                  SizedBox(height: 4,),
+                  Text('ACESSORIES',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12 ),)
+                ],
+              ),
+              const SizedBox(width: 20,),
+              Column(
+                children: [
+                  CircleAvatar(
+                    radius: 28,
+                    backgroundImage: AssetImage('assets/myntra_logo.png'),
+                  ),
+                  SizedBox(height: 4,),
+                  Text('HOME',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12 ),)
+                ],
+              ),
+              const SizedBox(width: 20,),
+                ],
+              ),
+            ),
+            SizedBox(height: 20,),
+            SizedBox(
+              height: 200,
+              width: double.infinity,
+              child: PageView.builder(
+
+                onPageChanged: (index){
+                  setState(() {
+                    currentIndex=index;
+                  });
+                },
+                itemCount: images.length,
+                itemBuilder: (context, index){
+                  return SizedBox(
+                    height: 200,
+                    width: double.infinity,
+                    child: Image.network(images[index % images.length],
+                      fit: BoxFit.cover,
+                    ),
+                  );
+                },
+              ),
+            ),
+            const SizedBox(
+              height: 7,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                for(var i=0;i< images.length; i++)
+                  buildIndicator(currentIndex==i,i)
+              ],
+            ),
+            SizedBox(height: 10,),
+            SizedBox(
+              height: 50,
+              width: double.infinity,
+              child: PageView.builder(
+
+                onPageChanged: (index){
+                  setState(() {
+                    currentIndex=index % images.length;
+                  });
+                },
+                itemCount: images.length,
+                itemBuilder: (context, index){
+                  return SizedBox(
+                    height: 200,
+                    width: double.infinity,
+                    child: Image.network(images[index % images.length],
+                      fit: BoxFit.cover,
+                    ),
+                  );
+                },
+              ),
+            ),
+            const SizedBox(height: 10,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                for(var i=0;i< images.length; i++)
+                  buildIndicator(currentIndex==i,i)
+              ],
+            ),
+            SizedBox(
+              height: 80,
+              width: double.infinity,
+              child: PageView.builder(
+
+                onPageChanged: (index){
+                  setState(() {
+                    currentIndex=index % images.length;
+                  });
+                },
+                itemCount: images.length,
+                itemBuilder: (context, index){
+                  return SizedBox(
+                    height: 200,
+                    width: double.infinity,
+                    child: Image.network(images[index % images.length],
+                      fit: BoxFit.cover,
+                    ),
+                  );
+                },
+              ),
+            ),
+            const SizedBox(height: 10,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                for(var i=0;i< images.length; i++)
+                  buildIndicator(currentIndex==i,i)
+              ],
+            ),
+            const SizedBox(height: 20,),
+            const Padding(
+              padding: EdgeInsets.only(left: 15),
+              child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text('HIGHLIGHTS OF THE DAY',style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
                   )
               ),
             ),
-          ),
-        ],
-      ),
-      SizedBox(height: 10),
-      SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Row(
-          children: [
-            SizedBox(width: 20,),
-            Column(
-              children: [
-                CircleAvatar(
-                  radius: 28,
-                  backgroundImage: AssetImage('assets/myntra_logo.png'),
-                ),
-                SizedBox(height: 10,),
-                Text('CATEGORIES')
-              ],
+            SizedBox(height: 15,),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(left: 10),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Container(
+                        width: 160,
+                        height: 200,
+                        color: Colors.amber,
+                        // Replace with your image widget
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 10),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Container(
+                        width: 160,
+                        height: 200,
+                        color: Colors.amber,
+                        // Replace with your image widget
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 10),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Container(
+                        width: 160,
+                        height: 200,
+                        color: Colors.amber,
+                        // Replace with your image widget
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 10),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Container(
+                        width: 160,
+                        height: 200,
+                        color: Colors.amber,
+                        // Replace with your image widget
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-            SizedBox(width: 20,),
 
-            Column(
-              children: [
-                CircleAvatar(
-                  radius: 28,
-                  backgroundImage: AssetImage('assets/myntra_logo.png'),
-                ),
-                SizedBox(height: 10,),
-                Text('CATEGORIES')
-              ],
+            SizedBox(height: 35,),
+            const Padding(
+              padding: EdgeInsets.only(left: 15),
+              child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text('FEATURED BRANDS',style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black,fontSize: 18),
+                  )
+              ),
             ),
-            SizedBox(width: 20,),
 
-            Column(
-              children: [
-                CircleAvatar(
-                  radius: 28,
-                  backgroundImage: AssetImage('assets/myntra_logo.png'),
+            SizedBox(height: 10,),
+            Padding(
+              padding: EdgeInsets.only(left: 5, right: 5),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                      Padding(
+                         padding: EdgeInsets.only(left: 10),
+                        child: Container(
+                          width: 220,
+                          height: 270,
+                          color: Colors.amber,
+                        ),
+                      ),
+                      Padding(
+                         padding: EdgeInsets.only(left: 10),
+                        child: Container(
+                          width: 220,
+                          height: 270,
+                          color: Colors.amber,
+                        ),
+                      ),
+                      Padding(
+                         padding: EdgeInsets.only(left: 10),
+                        child: Container(
+                          width: 220,
+                          height: 270,
+                          color: Colors.amber,
+                        ),
+                      ),
+                      Padding(
+                         padding: EdgeInsets.only(left: 10),
+                        child: Container(
+                          width: 220,
+                          height: 270,
+                          color: Colors.amber,
+                        ),
+                      ),
+                      Padding(
+                         padding: EdgeInsets.only(left: 10),
+                        child: Container(
+                          width: 220,
+                          height: 270,
+                          color: Colors.amber,
+                        ),
+                      ),
+                  ],
                 ),
-                SizedBox(height: 10,),
-                Text('CATEGORIES')
-              ],
+              ),
             ),
-            SizedBox(width: 20,),
 
-            Column(
-              children: [
-                CircleAvatar(
-                  radius: 28,
-                  backgroundImage: AssetImage('assets/myntra_logo.png'),
-                ),
-                SizedBox(height: 10,),
-                Text('CATEGORIES')
-              ],
-            ),
-            SizedBox(width: 20,),
-            Column(
-              children: [
-                CircleAvatar(
-                  radius: 28,
-                  backgroundImage: AssetImage('assets/myntra_logo.png'),
-                ),
-                SizedBox(height: 10,),
-                Text('CATEGORIES')
-              ],
-            ),
-            SizedBox(width: 20,),
-            Column(
-              children: [
-                CircleAvatar(
-                  radius: 28,
-                  backgroundImage: AssetImage('assets/myntra_logo.png'),
-                ),
-                SizedBox(height: 10,),
-                Text('CATEGORIES')
-              ],
-            ),
-            SizedBox(width: 20,)
-          ],
+          ]
         ),
-            )]
       ),
     );
+  }
+  Widget buildIndicator(bool isSelected, int itemIndex){
+    return Padding(
+          padding: const EdgeInsets.all(4.0),
+          child: Container(
+            height: isSelected ? 6:6,
+            width: isSelected? 6:6,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: isSelected? Colors.blue.withOpacity(0.6):Colors.grey
+            ),
+          ),
+        );
   }
 }
