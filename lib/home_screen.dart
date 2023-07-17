@@ -428,8 +428,47 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
 
+            SizedBox(height: 20,),
+            Container(
+              width: double.infinity,
+              height: 300,
+              color: Colors.grey.withOpacity(0.2),
+              child: Row(
+                children: [
+                  ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Container(
+                        width: 160,
+                        height: 200,
+                        color: Colors.amber,
+                        // Replace with your image widget
+                      ),
+                  )
+                ],
+              ),
+            )
           ]
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: ImageIcon(AssetImage('assets/myntra_logo.png')),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Everyday',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Luxe',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Luxe',
+          ),
+        ],
       ),
     );
   }
