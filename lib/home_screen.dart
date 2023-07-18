@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -735,8 +734,206 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(width: 20,),
                 ],
               )
-            )
+            ),
+            SizedBox(height: 12,),
+            Container(height: 2, color: Colors.grey.withOpacity(0.3),),
+            Container(
+              width: double.infinity,
+              height: 550,
+              color: Colors.transparent,
+                child: Column(
+                  children: [
+                    Expanded(
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Align(
+                              alignment: Alignment.bottomCenter,
+                              child: Container(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    Image.asset('assets/myntra_logo.png'),
+                                    Container(
+                                      height: 80,
+                                      color: Colors.white,
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(left: 10),
+                                        child: Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              Text('boAt', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),),
+                                              SizedBox(height: 1,),
+                                              Text('Headphones', style: TextStyle(color: Colors.grey, fontSize: 12),),
+                                              SizedBox(height: 1,),
+                                              Row(
+                                                children: [
+                                                  Text('\u20B9999 ', style: TextStyle(fontWeight: FontWeight.bold),),
+                                                  SizedBox(width: 2,),
+                                                  Text('\u20B92499', style: TextStyle(fontSize: 11, color: Colors.grey, decoration: TextDecoration.lineThrough),)
+                                                ],
+                                              ),
+                                              SizedBox(height: 1,),
+                                              const Text('Rs. 1500 OFF', style: TextStyle(color: Colors.red, fontSize: 12)),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
 
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(width: 2, color: Colors.grey.withOpacity(0.3)),
+                          Expanded(
+                            child: Align(
+                              alignment: Alignment.bottomCenter,
+                              child: Container(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    Image.asset('assets/myntra_logo.png'),
+                                    Container(
+                                      height: 80,
+                                      color: Colors.white,
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(left: 10),
+                                        child: Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              Text('boAt', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),),
+                                              SizedBox(height: 1,),
+                                              Text('Headphones', style: TextStyle(color: Colors.grey, fontSize: 12),),
+                                              SizedBox(height: 1,),
+                                              Row(
+                                                children: [
+                                                  Text('\u20B9999 ', style: TextStyle(fontWeight: FontWeight.bold),),
+                                                  SizedBox(width: 2,),
+                                                  Text('\u20B92499', style: TextStyle(fontSize: 11, color: Colors.grey, decoration: TextDecoration.lineThrough),)
+                                                ],
+                                              ),
+                                              SizedBox(height: 1,),
+                                              const Text('Rs. 1500 OFF', style: TextStyle(color: Colors.red, fontSize: 12)),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(height: 2, color: Colors.grey.withOpacity(0.3)),
+                    Expanded(
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Align(
+                              alignment: Alignment.bottomCenter,
+                              child: Container(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    Image.asset('assets/myntra_logo.png'),
+                                    Container(
+                                      height: 80,
+                                      color: Colors.white,
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(left: 10),
+                                        child: Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              Text('boAt', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),),
+                                              SizedBox(height: 1,),
+                                              Text('Headphones', style: TextStyle(color: Colors.grey, fontSize: 12),),
+                                              SizedBox(height: 1,),
+                                              Row(
+                                                children: [
+                                                  Text('\u20B9999 ', style: TextStyle(fontWeight: FontWeight.bold),),
+                                                  SizedBox(width: 2,),
+                                                  Text('\u20B92499', style: TextStyle(fontSize: 11, color: Colors.grey, decoration: TextDecoration.lineThrough),)
+                                                ],
+                                              ),
+                                              SizedBox(height: 1,),
+                                              const Text('Rs. 1500 OFF', style: TextStyle(color: Colors.red, fontSize: 12)),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(width: 2, color: Colors.grey.withOpacity(0.3)),
+                          Expanded(
+                            child: Align(
+                              alignment: Alignment.bottomCenter,
+                              child: Container(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    Image.asset('assets/myntra_logo.png'),
+                                    Container(
+                                      height: 80,
+                                      color: Colors.white,
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(left: 10),
+                                        child: Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              Text('boAt', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),),
+                                              SizedBox(height: 1,),
+                                              Text('Headphones', style: TextStyle(color: Colors.grey, fontSize: 12),),
+                                              SizedBox(height: 1,),
+                                              Row(
+                                                children: [
+                                                  Text('\u20B9999 ', style: TextStyle(fontWeight: FontWeight.bold),),
+                                                  SizedBox(width: 2,),
+                                                  Text('\u20B92499', style: TextStyle(fontSize: 11, color: Colors.grey, decoration: TextDecoration.lineThrough),)
+                                                ],
+                                              ),
+                                              SizedBox(height: 1,),
+                                              const Text('Rs. 1500 OFF', style: TextStyle(color: Colors.red, fontSize: 12)),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+            ),
+            Container(height: 2, color: Colors.grey.withOpacity(0.3),),
           ]
         ),
       ),
