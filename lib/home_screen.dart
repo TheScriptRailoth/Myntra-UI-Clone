@@ -428,25 +428,141 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
 
-            SizedBox(height: 20,),
+            SizedBox(height: 30,),
+            Container(
+              height: 40,
+              color: Colors.grey.withOpacity(0.2),
+              child: const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text('BUDGET BUYS', style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black, fontSize: 15),)
+                ),
+              ),
+            ),
             Container(
               width: double.infinity,
-              height: 300,
+              height: 280,
               color: Colors.grey.withOpacity(0.2),
               child: Row(
                 children: [
-                  ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Container(
-                        width: 160,
-                        height: 200,
-                        color: Colors.amber,
-                        // Replace with your image widget
+                  Padding(
+                    padding: EdgeInsets.only(left: 12),
+                    child: Column(
+                      children:[
+                        SizedBox(height: 10,),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Container(
+                          width: 80,
+                          height: 120,
+                          color: Colors.amber,
+                          // Replace with your image widget
+                        ),
                       ),
-                  )
+                      SizedBox(height: 10,),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Container(
+                          width: 80,
+                          height: 120,
+                          color: Colors.amber,
+                          // Replace with your image widget
+                        ),
+                      ),
+                        SizedBox(height: 10,),
+                      ]
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 12),
+                    child: Column(
+                      children:[
+                        SizedBox(height: 10,),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Container(
+                          width: 80,
+                          height: 120,
+                          color: Colors.amber,
+                          // Replace with your image widget
+                        ),
+                      ),
+                      SizedBox(height: 10,),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Container(
+                          width: 80,
+                          height: 120,
+                          color: Colors.amber,
+                          // Replace with your image widget
+                        ),
+                      ),
+                        SizedBox(height: 10,),
+                      ]
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 12),
+                    child: Column(
+                      children:[
+                        SizedBox(height: 10,),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Container(
+                          width: 80,
+                          height: 120,
+                          color: Colors.amber,
+                          // Replace with your image widget
+                        ),
+                      ),
+                      SizedBox(height: 10,),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Container(
+                          width: 80,
+                          height: 120,
+                          color: Colors.amber,
+                          // Replace with your image widget
+                        ),
+                      ),
+                        SizedBox(height: 10,),
+                      ]
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 12),
+                    child: Column(
+                      children:[
+                        SizedBox(height: 10,),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Container(
+                          width: 80,
+                          height: 120,
+                          color: Colors.amber,
+                          // Replace with your image widget
+                        ),
+                      ),
+                      SizedBox(height: 10,),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Container(
+                          width: 80,
+                          height: 120,
+                          color: Colors.amber,
+                          // Replace with your image widget
+                        ),
+                      ),
+                        SizedBox(height: 10,),
+                      ]
+                    ),
+                  ),
                 ],
               ),
             )
+
+
           ]
         ),
       ),
