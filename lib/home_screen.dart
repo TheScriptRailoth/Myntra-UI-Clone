@@ -938,9 +938,17 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        backgroundColor: Colors.white,
+        selectedItemColor: Colors.blue,
+        unselectedItemColor: Colors.black,
+        selectedLabelStyle: TextStyle(color: Colors.blue), // Set the desired color
+        unselectedLabelStyle: TextStyle(color: Colors.black), // Set the desired color
+        items: const [
           BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage('assets/myntra_logo.png')),
+            icon: ImageIcon(
+              AssetImage('assets/myntra_logo.png'),
+              color: Colors.blue,
+            ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
@@ -956,7 +964,8 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Luxe',
           ),
         ],
-      ),
+      )
+
     );
   }
   Widget buildIndicator(bool isSelected, int itemIndex){
