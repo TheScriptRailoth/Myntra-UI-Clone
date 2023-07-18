@@ -376,7 +376,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
 
-            SizedBox(height: 10,),
+            const SizedBox(height: 10,),
             Padding(
               padding: EdgeInsets.only(left: 5, right: 5),
               child: SingleChildScrollView(
@@ -428,7 +428,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
 
-            SizedBox(height: 30,),
+            const SizedBox(height: 30,),
             Container(
               height: 40,
               color: Colors.grey.withOpacity(0.2),
@@ -560,7 +560,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
-            )
+            ),
+
+            const SizedBox(height: 20,),
+            Container(
+              height: 70,
+              width: double.infinity,
+              child: Image.network('https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2023/7/17/44a02ffc-5ac7-4f5c-bf5c-5867ac41362f1689598665860-Myntra_Flood_Donation_1920_200_v2.jpg',
+              fit: BoxFit.fill,),
+            ),
+
 
 
           ]
