@@ -9,6 +9,12 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int currentIndex=0;
+  bool isButton1Selected = true;
+  bool isButton2Selected = false;
+  bool isButton3Selected = false;
+  bool isButton4Selected = false;
+  bool isButton5Selected = false;
+  Color hexColor = Color(int.parse('0xFFF13AB1'));
 
   List<String> images=[
     'https://assets.myntassets.com/f_webp,w_980,c_limit,fl_progressive,dpr_2.0/assets/images/2022/7/28/0174e4d7-448c-4746-8572-69461ad5be101659020268081-Tops---Tees_Desk.jpg',
@@ -570,7 +576,166 @@ class _HomeScreenState extends State<HomeScreen> {
               fit: BoxFit.fill,),
             ),
 
+            SizedBox(height: 30,),
+            const Padding(padding: EdgeInsets.symmetric(horizontal: 15),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text('Explore More Products', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),),
+              ),
+            ),
+            SizedBox(height: 10,),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  SizedBox(width: 15,),
+                  OutlinedButton(
+                    onPressed: () {
+                      setState(() {
+                        isButton1Selected = true;
+                        isButton2Selected = false;
+                        isButton3Selected = false;
+                        isButton4Selected = false;
+                        isButton5Selected = false;
+                      });
+                    },
+                    style: OutlinedButton.styleFrom(
+                      side: BorderSide(
+                        color: isButton1Selected ? hexColor: Colors.grey,
+                        width: 1.0,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30.0),
+                      ),
+                    ),
+                    child: Text(
+                      'All',
+                      style: TextStyle(
+                        color: isButton1Selected ? hexColor : Colors.black.withOpacity(0.7),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 20,),
 
+                  OutlinedButton(
+                    onPressed: () {
+                      setState(() {
+                        isButton1Selected = false;
+                        isButton2Selected = true;
+                        isButton3Selected = false;
+                        isButton4Selected = false;
+                        isButton5Selected = false;
+                      });
+                    },
+                    style: OutlinedButton.styleFrom(
+                      side: BorderSide(
+                        color: isButton2Selected ? hexColor: Colors.grey,
+                        width: 1.0,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30.0),
+                      ),
+                    ),
+                    child: Text(
+                      'Headphones',
+                      style: TextStyle(
+                        color: isButton2Selected ? hexColor : Colors.black.withOpacity(0.7),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 20,),
+
+                  OutlinedButton(
+                    onPressed: () {
+                      setState(() {
+                        isButton1Selected = false;
+                        isButton2Selected = false;
+                        isButton3Selected = true;
+                        isButton4Selected = false;
+                        isButton5Selected = false;
+                      });
+                    },
+                    style: OutlinedButton.styleFrom(
+                      side: BorderSide(
+                        color: isButton3Selected ? hexColor: Colors.grey,
+                        width: 1.0,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30.0),
+                      ),
+                    ),
+                    child: Text(
+                      'Kurta Set',
+                      style: TextStyle(
+                        color: isButton3Selected ? hexColor : Colors.black.withOpacity(0.7),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 20,),
+
+                  OutlinedButton(
+                    onPressed: () {
+                      setState(() {
+                        isButton1Selected = false;
+                        isButton2Selected = false;
+                        isButton3Selected = false;
+                        isButton4Selected = true;
+                        isButton5Selected = false;
+                      });
+                    },
+                    style: OutlinedButton.styleFrom(
+                      side: BorderSide(
+                        color: isButton4Selected ? hexColor: Colors.grey,
+                        width: 1.0,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30.0),
+                      ),
+                    ),
+                    child: Text(
+                      'Smart Watches',
+                      style: TextStyle(
+                        color: isButton4Selected ? hexColor : Colors.black.withOpacity(0.7),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 20,),
+
+                  OutlinedButton(
+                    onPressed: () {
+                      setState(() {
+                        isButton1Selected = false;
+                        isButton2Selected = false;
+                        isButton3Selected = false;
+                        isButton4Selected = false;
+                        isButton5Selected = true;
+                      });
+                    },
+                    style: OutlinedButton.styleFrom(
+                      side: BorderSide(
+                        color: isButton5Selected ? hexColor: Colors.grey,
+                        width: 1.0,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30.0),
+                      ),
+                    ),
+                    child: Text(
+                      'Flip Flops',
+                      style: TextStyle(
+                        color: isButton5Selected ? hexColor : Colors.black.withOpacity(0.7),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 20,),
+                ],
+              )
+            )
 
           ]
         ),
@@ -609,5 +774,11 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
         );
+  }
+
+  Color hexToColor(String hexCode) {
+    final hexDigits = hexCode.replaceAll('#', '');
+    final hexValue = int.parse(hexDigits, radix: 16);
+    return Color(hexValue);
   }
 }
