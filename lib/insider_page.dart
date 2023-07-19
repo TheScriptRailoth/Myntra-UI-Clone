@@ -10,6 +10,7 @@ class InsiderPage extends StatefulWidget {
 
 class _InsiderPageState extends State<InsiderPage> {
   Color GoldenColor = Color(int.parse('0xFFAE8847'));
+  Color hexColor = Color(int.parse('0xFFE72744'));
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +91,7 @@ class _InsiderPageState extends State<InsiderPage> {
                               alignment: Alignment.centerLeft,
                               child: Text(
                                 'Shop for \u20B92000 before 13th Oct to retain your Select benefits.',
-                                style: TextStyle(color: Colors.white, fontSize: 15, fontFamily:'Assistant', fontWeight: FontWeight.bold),
+                                style: TextStyle(color: Colors.white, fontSize: 14, fontFamily:'Assistant',),
                               ),
                             ),
                           ),
@@ -100,7 +101,7 @@ class _InsiderPageState extends State<InsiderPage> {
                               alignment: Alignment.centerLeft,
                               child: Text(
                                 'Shop Now',
-                                style: TextStyle(color: Colors.white, fontSize: 15, fontFamily:'Assistant', fontWeight: FontWeight.bold),
+                                style: TextStyle(color: Colors.white, fontSize: 14, fontFamily:'Assistant'),
                               ),
                             ),
                           ),
@@ -428,7 +429,139 @@ class _InsiderPageState extends State<InsiderPage> {
                 ],
               ),
             ),
-            SizedBox(height: 20,)
+            SizedBox(height: 20,),
+
+            Align(
+              alignment: Alignment.center,
+              child: Text('View All Rewards  >', style: TextStyle(color: hexColor, fontWeight: FontWeight.bold, fontSize: 16),),
+            ),
+            SizedBox(height: 15,),
+            Container(height: 1, color: Colors.grey.withOpacity(0.1),),
+
+            SizedBox(height: 10,),
+            Container(height: 15, color: Colors.grey.withOpacity(0.1),),
+            Row(
+              children: [
+                Padding(padding: EdgeInsets.only(left:15, top: 15),
+                child: Text('4 Exclusive Benefits', style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
+                ),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Padding(
+                    padding: EdgeInsets.only(left:160, top : 15),
+                    child: Text(
+                      'View All', style: TextStyle(color: hexColor, fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    color: Colors.white,
+                    height: 150,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.network('https://assets.myntassets.com/f_webp,dpr_1.5,q_auto,w_400,c_limit,fl_progressive/assets/images/retaillabs/2021/9/2/197b94a2-0660-41f6-b284-ff006ffc096e1630587839893-Pay-with-supercoins-2x.png',
+                          height: 60,
+                          width: 60,
+                          fit: BoxFit.contain,),
+                          SizedBox(height: 12,),
+                          Text('SuperCoints on all your \n purchase', style: TextStyle(fontSize: 13, fontFamily: 'Assistant', color: Colors.black87), textAlign: TextAlign.center,),
+                      ]
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    color: Colors.white,
+                    height: 150,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.network('https://assets.myntassets.com/f_webp,dpr_1.5,q_auto,w_400,c_limit,fl_progressive/assets/images/retaillabs/2021/9/2/6e1c32ff-1026-45ff-b86b-7c11c9ccd3211630587839913-Free-shipping-2x.png',
+                          height: 60,
+                          width: 60,
+                          fit: BoxFit.contain,),
+                          SizedBox(height: 12,),
+                          Text('FREE Shipping On All \n Purchases', style: TextStyle(fontSize: 13, fontFamily: 'Assistant', color: Colors.black87), textAlign: TextAlign.center,),
+                      ]
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    color: Colors.white,
+                    height: 150,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.network('https://assets.myntassets.com/f_webp,dpr_1.5,q_auto,w_400,c_limit,fl_progressive/assets/images/retaillabs/2021/9/2/d9dd768c-83f9-4660-98fa-c8089763f1071630587693134-Early-access-to-sale-2x.png',
+                          height: 60,
+                          width: 60,
+                          fit: BoxFit.contain,),
+                          SizedBox(height: 12,),
+                          Text('Early Access to Sale \n events', style: TextStyle(fontSize: 13, fontFamily: 'Assistant', color: Colors.black87), textAlign: TextAlign.center,),
+                      ]
+                    ),
+                  ),
+                ),
+
+              ],
+            ),
+            Container(height: 15, color: Colors.grey.withOpacity(0.1),),
+            
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Align(
+                     alignment: Alignment.centerLeft,
+                      child: Text('Know more about the Loyalty \nProgram', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, fontFamily: 'Assistant-ExtraBold'),)),
+                )
+              ],
+            ),
+
+
+
+
+            Container(
+              height: 120,
+              width: double.infinity,
+              color: Colors.black,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset('assets/myntra_logo.png',
+                      width: 30,
+                        height: 25,
+                        fit: BoxFit.cover,
+                      ),
+                      SizedBox(width: 4,),
+                      Image.network('https://assets.myntassets.com/assets/images/retaillabs/2021/7/13/fd694523-c75d-46ac-babc-27d94e7807ab1626184638366-Slice-30-3x.png',
+                      width: 90,
+                      height: 25,
+                      fit: BoxFit.contain,)
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('Fasion Advice | VIP Access | Extra Saving', style: TextStyle(color: Colors.grey, fontFamily: 'Assistant', fontWeight: FontWeight.bold, fontSize: 11),)
+                    ],
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       )

@@ -80,8 +80,8 @@ flutter:
   fonts:
      - family: Assistant
        fonts:
-         - asset: fonts/Assistant_VariableFont.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+         - asset: fonts/Assistant-Regular.ttf
+         - asset: fonts/Assistant-ExtraBold.ttf
   #         style: italic
      - family: SourceSansPro
        fonts:
