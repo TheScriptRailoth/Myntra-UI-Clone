@@ -94,80 +94,6 @@ class _InsiderPageState extends State<InsiderPage> {
                                 )
                             ),
                           ),
-                          Padding(
-                            padding: EdgeInsets.only(left: 15, top: 2),
-                            child: Align(
-                              alignment: Alignment.centerLeft,
-                                child: Row(
-                                    children: [
-                                      Expanded(
-                                        flex: 1,
-                                        child: Container(
-                                          color: Colors.transparent,
-                                          height: 100,
-                                          child: Column(
-                                              mainAxisAlignment: MainAxisAlignment.center,
-                                              children: [
-                                                Container(
-                                                  width: 50,
-                                                  height: 50,
-                                                  decoration: BoxDecoration(
-                                                    color: Colors.black.withOpacity(0.2),
-                                                    borderRadius: BorderRadius.all(Radius.circular(50)),
-                                                  ),
-                                                  child: Row(
-                                                    children: [
-                                                      SvgPicture.asset('assets/super_coin_icon.svg'),
-                                                      Text('20', style: TextStyle(),),
-                                                    ],
-                                                  ),
-                                                ),
-                                                SizedBox(height: 12,),
-                                                Text('SuperCoints on all your \n purchase', style: TextStyle(fontSize: 13, fontFamily: 'Assistant', color: Colors.black87), textAlign: TextAlign.center,),
-                                              ]
-                                          ),
-                                        ),
-                                      ),
-                                      Expanded(
-                                        flex: 1,
-                                        child: Container(
-                                          color: Colors.white,
-                                          height: 100,
-                                          child: Column(
-                                              mainAxisAlignment: MainAxisAlignment.center,
-                                              children: [
-                                                Image.network('https://assets.myntassets.com/f_webp,dpr_1.5,q_auto,w_400,c_limit,fl_progressive/assets/images/retaillabs/2021/9/2/6e1c32ff-1026-45ff-b86b-7c11c9ccd3211630587839913-Free-shipping-2x.png',
-                                                  height: 60,
-                                                  width: 60,
-                                                  fit: BoxFit.contain,),
-                                                SizedBox(height: 12,),
-                                                Text('FREE Shipping On All \n Purchases', style: TextStyle(fontSize: 13, fontFamily: 'Assistant', color: Colors.black87), textAlign: TextAlign.center,),
-                                              ]
-                                          ),
-                                        ),
-                                      ),
-                                      Expanded(
-                                        flex: 1,
-                                        child: Container(
-                                          color: Colors.white,
-                                          height: 100,
-                                          child: Column(
-                                              mainAxisAlignment: MainAxisAlignment.center,
-                                              children: [
-                                                Image.network('https://assets.myntassets.com/f_webp,dpr_1.5,q_auto,w_400,c_limit,fl_progressive/assets/images/retaillabs/2021/9/2/d9dd768c-83f9-4660-98fa-c8089763f1071630587693134-Early-access-to-sale-2x.png',
-                                                  height: 60,
-                                                  width: 60,
-                                                  fit: BoxFit.contain,),
-                                                SizedBox(height: 12,),
-                                                Text('Early Access to Sale \n events', style: TextStyle(fontSize: 13, fontFamily: 'Assistant', color: Colors.black87), textAlign: TextAlign.center,),
-                                              ]
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                )
-                                ),
-                            ),
                         ],
                       ),
                     ),
@@ -181,6 +107,190 @@ class _InsiderPageState extends State<InsiderPage> {
                         ),
                       ),
                     ),
+
+
+                    Padding(
+                      padding: EdgeInsets.only(left: 0, top: 180),
+                      child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                flex: 1,
+                                child: Container(
+                                  color: Colors.transparent,
+                                  height: 100,
+                                  child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          width: 60,
+                                          height: 33,
+                                          decoration: BoxDecoration(
+                                            color: Colors.white.withOpacity(0.1),
+                                            borderRadius: BorderRadius.all(Radius.circular(30)),
+                                          ),
+                                          child: Row(
+                                            children: [
+                                              Padding(
+                                                padding: EdgeInsets.only(left: 5),
+                                                child: SvgPicture.asset('assets/gift_box_icon.svg',
+                                                width: 20,
+                                                height: 20,),
+                                              ),
+                                              Text(' 20 >', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontFamily: 'Assistant'),),
+                                            ],
+                                          ),
+                                        ),
+                                        SizedBox(height: 5,),
+                                        Text('SuperCoins', style: TextStyle(fontSize: 13, fontFamily: 'Assistant', color: Colors.white), textAlign: TextAlign.center,),
+                                      ]
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 1,
+                                child: Container(
+                                  color: Colors.transparent,
+                                  height: 100,
+                                  child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          width: 60,
+                                          height: 33,
+                                          decoration: BoxDecoration(
+                                            color: Colors.white.withOpacity(0.1),
+                                            borderRadius: BorderRadius.all(Radius.circular(30)),
+                                          ),
+                                          child: Row(
+                                            children: [
+                                              Padding(
+                                                padding: EdgeInsets.only(left: 5),
+                                                child: SvgPicture.asset('assets/super_coin_icon.svg',
+                                                width: 20,
+                                                height: 20,),
+                                              ),
+                                              Text(' 49 >', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontFamily: 'Assistant'),),
+                                            ],
+                                          ),
+                                        ),
+                                        SizedBox(height: 5,),
+                                        Text('SuperCoins', style: TextStyle(fontSize: 13, fontFamily: 'Assistant', color: Colors.white), textAlign: TextAlign.center,),
+                                      ]
+                                  ),
+                                ),
+                              ),
+                              Expanded(
+                                flex: 1,
+                                child: Container(
+                                  color: Colors.transparent,
+                                  height: 100,
+                                  child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Container(
+                                          width: 60,
+                                          height: 33,
+                                          decoration: BoxDecoration(
+                                            color: Colors.white.withOpacity(0.1),
+                                            borderRadius: BorderRadius.all(Radius.circular(30)),
+                                          ),
+                                          child: Row(
+                                            children: [
+                                              Padding(
+                                                padding: EdgeInsets.only(left: 5),
+                                                child: SvgPicture.asset('assets/money_icon.svg',
+                                                width: 20,
+                                                height: 20,),
+                                              ),
+                                              Text(' \u20B90 >', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontFamily: 'Assistant'),),
+                                            ],
+                                          ),
+                                        ),
+                                        SizedBox(height: 5,),
+                                        Text('SuperCoins', style: TextStyle(fontSize: 13, fontFamily: 'Assistant', color: Colors.white), textAlign: TextAlign.center,),
+                                      ]
+                                  ),
+                                ),
+                              ),
+                            ],
+                          )
+                      ),
+                    ),
+
+                    Padding(
+                      padding: EdgeInsets.only(left: 0, top: 280),
+                      child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Container(
+                            height: 75,
+                            width: double.infinity,
+                            color: Colors.transparent,
+                            child: Column(
+                              children: [
+                                Stack(
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.only(top: 20, left: 25),
+                                      child: Container(
+                                        width: 330,
+                                        height: 5,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.all(Radius.circular((50))),
+                                          color: GoldenColor
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(top: 0),
+                                          child: Container(
+                                            height: 75,
+                                            color: Colors.black.withOpacity(0.8),
+                                        )
+                                      ),
+                                     Padding(
+                                       padding: EdgeInsets.only(top: 12, left: 25),
+                                            child: Container(
+                                                height: 20,
+                                                width: 20,
+                                                decoration: BoxDecoration(
+                                                  color: GoldenColor,
+                                                  borderRadius: BorderRadius.all(Radius.circular(50))
+                                                ),
+                                            )
+                                     ),
+                                     Padding(
+                                       padding: EdgeInsets.only(top: 19, left: 32),
+                                            child: Container(
+                                                height: 7,
+                                                width: 7,
+                                                decoration: BoxDecoration(
+                                                  color: Colors.white,
+                                                  borderRadius: BorderRadius.all(Radius.circular(50))
+                                                ),
+                                            )
+                                     ),
+                                     Padding(
+                                       padding: EdgeInsets.only(top: 19, left: 350),
+                                            child: Container(
+                                                height: 7,
+                                                width: 7,
+                                                decoration: BoxDecoration(
+                                                  color: Colors.white,
+                                                  borderRadius: BorderRadius.all(Radius.circular(50))
+                                                ),
+                                            )
+                                     )
+                                  ],
+                                )
+                              ],
+                            ),
+                          )
+                      ),
+                    ),
+
                   ],
                 ),
                   Row(
