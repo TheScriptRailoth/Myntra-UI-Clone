@@ -1,5 +1,5 @@
 import 'dart:convert';
-
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 class InsiderPage extends StatefulWidget {
   const InsiderPage({super.key});
@@ -11,7 +11,6 @@ class InsiderPage extends StatefulWidget {
 class _InsiderPageState extends State<InsiderPage> {
   Color GoldenColor = Color(int.parse('0xFFAE8847'));
   Color hexColor = Color(int.parse('0xFFE72744'));
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,26 +42,134 @@ class _InsiderPageState extends State<InsiderPage> {
                         color: Colors.black,
                         borderRadius: BorderRadius.only(bottomLeft: Radius.circular(30), bottomRight: Radius.circular(30)),
                       ),
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(top: 38),
-                              child: Align(
-                                alignment: Alignment.center,
-                                child: Row(
-                                   mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Text('Welcome', style: TextStyle(color: Colors.white, fontSize: 20,),),
-                                    SizedBox(width: 4,),
-                                    Text('Ashutosh', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontFamily: 'SourceSansPro', fontSize: 20),),
-                                    Text('!', style: TextStyle(color: Colors.white, fontFamily: 'SourceSansPro', fontSize: 20),)
-                                  ],
-                                ),
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(top: 30),
+                            child: Align(
+                              alignment: Alignment.center,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text('Welcome', style: TextStyle(color: Colors.white, fontSize: 20, fontFamily: 'Assistant')),
+                                  SizedBox(width: 4),
+                                  Text('Ashutosh', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontFamily: 'Assistant', fontSize: 20)),
+                                  Text('!', style: TextStyle(color: Colors.white, fontFamily: 'Assistant', fontSize: 20)),
+                                ],
                               ),
                             ),
-                            SizedBox(height: 30,),
-                          ],
-                        )
+                          ),
+                          SizedBox(height: 38),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(left: 15),
+                                child: SvgPicture.asset('assets/crown.svg',
+                                height: 15,),
+                              ),
+                              SizedBox(width: 5,),
+                              Container(
+                                height: 15,
+                                child: Image.network(
+                                  'https://assets.myntassets.com/assets/images/retaillabs/2021/7/13/fd694523-c75d-46ac-babc-27d94e7807ab1626184638366-Slice-30-3x.png',
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 15),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                                child: Text('SELECT MEMBER', style: TextStyle(fontFamily: 'Assistant', fontSize: 32, fontWeight: FontWeight.bold, color: Colors.white),
+                                )
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 15, top: 2),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                                child: Text('Trial ends on 13 Oct', style: TextStyle(fontFamily: 'Assistant', color: Colors.grey),
+                                )
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(left: 15, top: 2),
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                                child: Row(
+                                    children: [
+                                      Expanded(
+                                        flex: 1,
+                                        child: Container(
+                                          color: Colors.transparent,
+                                          height: 100,
+                                          child: Column(
+                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              children: [
+                                                Container(
+                                                  width: 50,
+                                                  height: 50,
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.black.withOpacity(0.2),
+                                                    borderRadius: BorderRadius.all(Radius.circular(50)),
+                                                  ),
+                                                  child: Row(
+                                                    children: [
+                                                      SvgPicture.asset('assets/super_coin_icon.svg'),
+                                                      Text('20', style: TextStyle(),),
+                                                    ],
+                                                  ),
+                                                ),
+                                                SizedBox(height: 12,),
+                                                Text('SuperCoints on all your \n purchase', style: TextStyle(fontSize: 13, fontFamily: 'Assistant', color: Colors.black87), textAlign: TextAlign.center,),
+                                              ]
+                                          ),
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 1,
+                                        child: Container(
+                                          color: Colors.white,
+                                          height: 100,
+                                          child: Column(
+                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              children: [
+                                                Image.network('https://assets.myntassets.com/f_webp,dpr_1.5,q_auto,w_400,c_limit,fl_progressive/assets/images/retaillabs/2021/9/2/6e1c32ff-1026-45ff-b86b-7c11c9ccd3211630587839913-Free-shipping-2x.png',
+                                                  height: 60,
+                                                  width: 60,
+                                                  fit: BoxFit.contain,),
+                                                SizedBox(height: 12,),
+                                                Text('FREE Shipping On All \n Purchases', style: TextStyle(fontSize: 13, fontFamily: 'Assistant', color: Colors.black87), textAlign: TextAlign.center,),
+                                              ]
+                                          ),
+                                        ),
+                                      ),
+                                      Expanded(
+                                        flex: 1,
+                                        child: Container(
+                                          color: Colors.white,
+                                          height: 100,
+                                          child: Column(
+                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              children: [
+                                                Image.network('https://assets.myntassets.com/f_webp,dpr_1.5,q_auto,w_400,c_limit,fl_progressive/assets/images/retaillabs/2021/9/2/d9dd768c-83f9-4660-98fa-c8089763f1071630587693134-Early-access-to-sale-2x.png',
+                                                  height: 60,
+                                                  width: 60,
+                                                  fit: BoxFit.contain,),
+                                                SizedBox(height: 12,),
+                                                Text('Early Access to Sale \n events', style: TextStyle(fontSize: 13, fontFamily: 'Assistant', color: Colors.black87), textAlign: TextAlign.center,),
+                                              ]
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                )
+                                ),
+                            ),
+                        ],
+                      ),
                     ),
                     Container(
                       width: double.infinity,
