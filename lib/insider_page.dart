@@ -225,7 +225,7 @@ class _InsiderPageState extends State<InsiderPage> {
                       child: Align(
                           alignment: Alignment.centerLeft,
                           child: Container(
-                            height: 75,
+                            height: 90,
                             width: double.infinity,
                             color: Colors.transparent,
                             child: Column(
@@ -235,7 +235,7 @@ class _InsiderPageState extends State<InsiderPage> {
                                     Padding(
                                       padding: EdgeInsets.only(top: 20, left: 25),
                                       child: Container(
-                                        width: 330,
+                                        width: 380,
                                         height: 5,
                                         decoration: BoxDecoration(
                                           borderRadius: BorderRadius.all(Radius.circular((50))),
@@ -282,9 +282,32 @@ class _InsiderPageState extends State<InsiderPage> {
                                                   borderRadius: BorderRadius.all(Radius.circular(50))
                                                 ),
                                             )
-                                     )
+                                     ),
+
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 37, left:26),
+                                      child: Row(
+                                        children: [
+                                          Text('\u20B90', style: TextStyle(color: Colors.white),),
+                                          SizedBox(width: 49,),
+                                          Text('\u20B9500', style: TextStyle(color: Colors.white)),
+                                          SizedBox(width: 49,),
+                                          Text('\u20B91000', style: TextStyle(color: Colors.white)),
+                                          SizedBox(width: 49,),
+                                          Text('\u20B91500', style: TextStyle(color: Colors.white)),
+                                          SizedBox(width: 49,),
+                                          Text('\u20B92000', style: TextStyle(color: Colors.white)),
+                                        ],
+                                      ),
+                                    ),
+
+                                    Padding(
+                                      padding: const EdgeInsets.only(top:73,left:40),
+                                      child: Text('Unlock 12 Month Select Insider by reaching your goal', style: TextStyle(color: Colors.white),),
+                                    )
+
                                   ],
-                                )
+                                ),
                               ],
                             ),
                           )
@@ -734,16 +757,16 @@ class _InsiderPageState extends State<InsiderPage> {
             ),
             Container(height: 15, color: Colors.grey.withOpacity(0.1),),
             
-            Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Align(
-                     alignment: Alignment.centerLeft,
-                      child: Text('Know more about the Loyalty \nProgram', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, fontFamily: 'Assistant-ExtraBold'),)),
-                )
-              ],
-            ),
+            // Column(
+            //   children: [
+            //     Padding(
+            //       padding: const EdgeInsets.all(10.0),
+            //       child: Align(
+            //          alignment: Alignment.centerLeft,
+            //           child: Text('Know more about the Loyalty \nProgram', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, fontFamily: 'Assistant-ExtraBold'),)),
+            //     )
+            //   ],
+            // ),
 
 
 
