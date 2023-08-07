@@ -10,7 +10,7 @@ You can find a screen recording of the project in action by following this Googl
 ## Installation
 To run the project locally, please follow these steps:
 
-Clone this repository: git clone https://github.com/your-username/myntra-ui-clone.git
+Clone this repository: git clone https://github.com/TheScriptRailoth/myntra-ui-clone.git
 Navigate to the project directory: cd myntra-ui-clone
 Open the project in your preferred IDE or code editor.
 
